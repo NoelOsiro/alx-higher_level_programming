@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-def uppercase(Str):
-    """
-    Prints the input string in uppercase followed by a new line.
-
-    :param Str: The input string.
-    :type Str: str
-    """
-    for char in Str:
-        uppercase_char = chr(ord(char) - ord('a') + ord('A')) if 'a' <= char <= 'z' else char
-        print("{}".format(uppercase_char), end="")
-    print()
+def uppercase(str):
+    """Print a string in uppercase."""
+    for c in str:
+        if ord(c) >= 97 and ord(c) <= 122:
+            c = chr(ord(c) - 32)
+        print("{}".format(c), end="")
+    print("")
