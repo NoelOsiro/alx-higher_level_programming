@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
-
-void reverse_list(listint_t **head)
-int compare_lists(listint_t *list1, listint_t *list2)
-int is_palindrome(listint_t **head)
-
 /**
  * reverse_list - Reverses a linked list
  * @head: Pointer to pointer of the head of the list
