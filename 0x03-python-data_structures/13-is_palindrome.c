@@ -50,13 +50,13 @@ int compare_lists(listint_t *list1, listint_t *list2)
  */
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
-
 	listint_t *slow = *head;
 	listint_t *fast = *head;
 	listint_t *prev_slow = NULL;
-
+	int is_palindrome = compare_lists(*head, slow);
+	
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
 	while (fast != NULL && fast->next != NULL)
 	{
 		fast = fast->next->next;
@@ -73,7 +73,7 @@ int is_palindrome(listint_t **head)
 
 	reverse_list(&slow);
 
-	int is_palindrome = compare_lists(*head, slow);
+	
 
 	reverse_list(&slow);
 
