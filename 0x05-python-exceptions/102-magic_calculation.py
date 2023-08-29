@@ -12,4 +12,4 @@ def magic_calculation(a, b):
         except (ValueError, TypeError):
             result = b + a
             break
-    return (result)
+    return result
