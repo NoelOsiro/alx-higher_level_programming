@@ -1,14 +1,4 @@
-# Python - Classes and Objects
-
-In this project, I began practicing object-oriented programming using
-classes and objects in Python. I learned about attributes, methods, and
-properties as well as data abstraction, data encapsulation, and information
-hiding.
-
-## Tests :heavy_check_mark:
-
-* [tests](./tests): Folder of test files. Provided by Holberton School.
-
+# Python - Classes and Object
 ## Tasks :page_with_curl:
 
 * **0. My first square**
@@ -98,5 +88,4 @@ hiding.
     `<=`, `>`, and `>=`, respectively, based on the square area.
 
 * **10. ByteCode -> Python #5**
-  * [103-magic_class.py](./103-magic_class.py): Python function matching exactly a bytecode
-  provided by Holberton School.
+  * [103-magic_class.py](./103-magic_class.py): Python function
