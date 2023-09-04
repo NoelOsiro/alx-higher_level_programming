@@ -99,6 +99,7 @@ class NQueensSolver:
         self.solve_n_queens_util(board, 0)
         return self.solutions
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         NQueensSolver.print_and_exit("Usage: nqueens N")
@@ -108,7 +109,6 @@ if __name__ == "__main__":
         NQueensSolver.print_and_exit("N must be a number")
     solver = NQueensSolver(N)
     solutions = solver.solve_n_queens()
-
 
     if solutions:
         for solution in solutions:
