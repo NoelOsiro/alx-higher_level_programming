@@ -100,18 +100,15 @@ class NQueensSolver:
         return self.solutions
 
 if __name__ == "__main__":
-
-
     if len(sys.argv) != 2:
         NQueensSolver.print_and_exit("Usage: nqueens N")
-
     try:
         N = int(sys.argv[1])
     except ValueError:
         NQueensSolver.print_and_exit("N must be a number")
-
     solver = NQueensSolver(N)
     solutions = solver.solve_n_queens()
+
 
     if solutions:
         for solution in solutions:
