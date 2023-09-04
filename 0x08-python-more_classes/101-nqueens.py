@@ -31,12 +31,10 @@ class NQueensSolver:
         self._N = N
         self.solutions = []
 
-
     @property
     def N(self):
         """Get/set the chessboard dimensions."""
         return self._N
-
 
     @N.setter
     def N(self, value):
@@ -45,7 +43,6 @@ class NQueensSolver:
         if value < 4:
             self.print_and_exit("N must be at least 4")
         self._N = value
-
 
     @staticmethod
     def print_and_exit(message):
