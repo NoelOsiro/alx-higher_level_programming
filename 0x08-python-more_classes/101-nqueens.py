@@ -105,6 +105,8 @@ if __name__ == "__main__":
         NQueensSolver.print_and_exit("Usage: nqueens N")
     try:
         N = int(sys.argv[1])
+        if N < 4:
+            NQueensSolver.print_and_exit("N must be at least 4")
     except ValueError:
         NQueensSolver.print_and_exit("N must be a number")
     solver = NQueensSolver(N)
