@@ -58,7 +58,7 @@ class NQueensSolver:
             row (int): The cell row id of the chessboard.
             col (int): The cell column id of the chessboard.
             board : The chessboard array of N X N
-        """ 
+        """
         for i in range(row):
             if board[i][col] == 1:
                 return False
@@ -71,7 +71,7 @@ class NQueensSolver:
         return True
 
     def solve_n_queens_util(self, board, row):
-        """Backtracking function to check each cell 
+        """Backtracking function to check each cell
 
 
         Args:
@@ -100,6 +100,8 @@ class NQueensSolver:
         return self.solutions
 
 if __name__ == "__main__":
+
+
     if len(sys.argv) != 2:
         NQueensSolver.print_and_exit("Usage: nqueens N")
 
