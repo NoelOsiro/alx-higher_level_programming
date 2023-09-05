@@ -137,4 +137,4 @@ Prototypes for functions written in this project:
 
 * **16. ByteCode -> Python #2**
   * [102-magic_calculation.py](./102-magic_calculation.py): Python function matching exactly a
-  bytecode provided by Holberton School.
+  bytecode provided.
