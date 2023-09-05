@@ -43,8 +43,8 @@ Prototypes for functions written in this project:
   
 
 * **6. Play with strings**
-  * [6-concat.py](./6-concat.py): Python script that prints `Welcome to Holberton
-  School!` using the variables `str1 = "Holberton"` and `str2 = "School"`.
+  * [6-concat.py](./6-concat.py): Python script that prints text
+  * using the variables `str1 = " "` and `str2 = " "`.
 
 
 * **7. Copy - Cut - Paste**
