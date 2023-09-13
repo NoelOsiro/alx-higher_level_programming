@@ -2,13 +2,16 @@
 """Defines a class and inherited class-checking function."""
 
 
-def is_same_class(obj, a_class):
-    """
-    Returns True if the object is exactly an instance of the specified
-    class; otherwise False.
+def is_kind_of_class(obj, a_class):
+    """Check if an object is an instance or inherited instance of a class.
 
-    :param obj: The object to check.
-    :param a_class: The class to compare with.
-    :return: True if obj is an instance of a_class, False otherwise.
+    Args:
+        obj (any): The object to check.
+        a_class (type): The class to match the type of obj to.
+    Returns:
+        If obj is an instance or inherited instance of a_class - True.
+        Otherwise - False.
     """
-    return type(obj) is a_class
+    if isinstance(obj, a_class):
+        return True
+    return False
