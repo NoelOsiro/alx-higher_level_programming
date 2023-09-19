@@ -78,7 +78,8 @@ class Base:
 
         if list_objs is not None:
             # Create a list of dictionaries representing the objects
-            json_string = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+            json_string = cls.to_json_string(
+                [obj.to_dictionary() for obj in list_objs])
 
         with open(filename, 'w') as file:
             file.write(json_string)
@@ -163,8 +164,7 @@ class Base:
         Returns:
             None
         """
-        filename = cls.__name__ + ".csv"  # Construct the filename based on the class name
-
+        filename = cls.__name__ + ".csv"
         with open(filename, 'w', newline='') as file:
             writer = csv.writer(file)
 
@@ -193,11 +193,12 @@ class Base:
                 reader = csv.DictReader(file)
 
                 for row in reader:
-                    if cls.__name__ == "Rectangle":
+                    if cls.__name__ == "Rectangle": 
                         instance = cls(int(row['width']), int(row['height']),
-                                        int(row['x']), int(row['y']), int(row['id']))
+                                       int(row['x']), int(row['y']), int(row['id']))
                     elif cls.__name__ == "Square":
-                        instance = cls(int(row['size']), int(row['x']), int(row['y']), int(row['id']))
+                        instance = cls(int(row['size']),
+                                       int(row['x']), int(row['y']), int(row['id']))
 
                     instance_list.append(instance)
 
