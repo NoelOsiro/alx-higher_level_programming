@@ -30,7 +30,7 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertNotEqual(b1.id, b2.id)
         self.assertNotEqual(b2.id, b3.id)
         self.assertNotEqual(b1.id, b3.id)
-    
+ 
     def test_auto_id_increment(self):
         """Test that Base automatically assigns IDs incrementally."""
         # Create multiple Base instances without specifying an ID.
@@ -48,6 +48,7 @@ class TestBase_instantiation(unittest.TestCase):
 
         # Check if the instance has the ID passed as an argument.
         self.assertEqual(b.id, 89)
+
 
 if __name__ == "__main__":
     unittest.main()
