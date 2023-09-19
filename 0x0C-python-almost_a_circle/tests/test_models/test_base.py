@@ -43,16 +43,19 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(b.id, 89)
 
     def test_base_constructor_with_id(self):
+        """Test Base constructor with an ID argument."""
         b1 = Base(5)
         self.assertEqual(b1.id, 5)
 
     def test_base_constructor_without_id(self):
+        """Test Base constructor without an ID argument."""
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, 1)
         self.assertEqual(b2.id, 2)
 
     def test_to_json_string(self):
+        """Test the to_json_string method."""
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
         s1 = '[{"id": 1,"width": 10, "height": 7,'
@@ -65,6 +68,7 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(json_str, s1 + s2 + s3)
 
     def test_from_json_string(self):
+        """Test the from_json_string method."""
         s1 = '[{"id": 1,"width": 10, "height": 7,'
         s2 = '  "x": 2, "y": 8}, {"id": 2, "width": 2, '
         s3 = '"height": 4, "x": 0, "y": 0}]'
@@ -76,6 +80,7 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(json_list[0]['width'], 10)
 
     def test_save_to_file_and_load_from_file(self):
+        """Test the save_to_file and load_from_file methods."""
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
         Rectangle.save_to_file([r1, r2])
@@ -85,6 +90,7 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(loaded_rectangles[1].height, 4)
 
     def test_create_method(self):
+        """Test the create method."""
         r_dict = {
             'id': 5,
             'width': 3,
@@ -97,6 +103,7 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(r.x, 1)
 
     def test_save_to_file_csv_and_load_from_file_csv(self):
+        """Test the save_to_file_csv and load_from_file_csv methods."""
         s1 = Square(5)
         s2 = Square(7, 9, 1)
         Square.save_to_file_csv([s1, s2])
@@ -106,6 +113,7 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(loaded_squares[1].y, 1)
 
     def test_draw_method(self):
+        """Test the draw method."""
         r1 = Rectangle(10, 7, 2, 8)
         s1 = Square(5)
         self.assertIsNone(Base.draw([r1], [s1]))
