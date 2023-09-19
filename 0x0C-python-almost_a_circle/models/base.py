@@ -12,7 +12,8 @@ class Base:
         """Initialize a Base instance with a unique id.
 
         Args:
-            id (int, optional): The id to assign to the instance. Defaults to None.
+            id (int, optional): The id to assign to the instance.
+            Defaults to None.
 
         Note:
             If id is provided, it will be assigned to the instance.
