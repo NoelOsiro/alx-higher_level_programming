@@ -55,20 +55,19 @@ class TestBase_instantiation(unittest.TestCase):
     def test_to_json_string(self):
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
-        s1= '[{"id": 1,"width": 10, "height": 7,'
-        s2= '  "x": 2, "y": 8}, {"id": 2, "width": 2, '
-        s3= '"height": 4, "x": 0, "y": 0}]'
+        s1 = '[{"id": 1,"width": 10, "height": 7,'
+        s2 = '  "x": 2, "y": 8}, {"id": 2, "width": 2, '
+        s3 = '"height": 4, "x": 0, "y": 0}]'
         json_str = Rectangle.to_json_string(
             [r1.to_dictionary(),
              r2.to_dictionary()])
         self.assertTrue(isinstance(json_str, str))
-        self.assertEqual(json_str,s1 + s2 + s3)
-                        
+        self.assertEqual(json_str, s1 + s2 + s3)
 
     def test_from_json_string(self):
-        s1= '[{"id": 1,"width": 10, "height": 7,'
-        s2= '  "x": 2, "y": 8}, {"id": 2, "width": 2, '
-        s3= '"height": 4, "x": 0, "y": 0}]'
+        s1 = '[{"id": 1,"width": 10, "height": 7,'
+        s2 = '  "x": 2, "y": 8}, {"id": 2, "width": 2, '
+        s3 = '"height": 4, "x": 0, "y": 0}]'
         json_str = s1 + s2 + s3
         json_list = Rectangle.from_json_string(json_str)
         self.assertTrue(isinstance(json_list, list))
