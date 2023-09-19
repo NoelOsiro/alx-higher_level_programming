@@ -34,7 +34,8 @@ class Base:
         """Return the JSON string representation of a list of dictionaries.
 
         Args:
-            list_dictionaries (list): A list of dictionaries to be converted to JSON.
+            list_dictionaries (list): A list of dictionaries
+            to be converted to JSON.
 
         Returns:
             str: The JSON string representation of list_dictionaries.
@@ -49,7 +50,8 @@ class Base:
         """Convert a JSON string to a list of dictionaries.
 
         Args:
-            json_string (str): A JSON string representing a list of dictionaries.
+            json_string (str): A JSON string representing
+            a list of dictionaries.
 
         Returns:
             list: A list of dictionaries.
@@ -61,10 +63,12 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Write the JSON string representation of list_objs to a file.
+        """Write the JSON string representation of
+        list_objs to a file.
 
         Args:
-            list_objs (list): A list of instances that inherit from Base.
+            list_objs (list): A list of instances that
+            inherit from Base.
 
         Returns:
             None
@@ -104,13 +108,16 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Create an instance with all attributes set from a dictionary.
+        """Create an instance with all attributes
+        set from a dictionary.
 
         Args:
-            **dictionary: A dictionary containing attribute names and values.
+            **dictionary: A dictionary containing
+            attribute names and values.
 
         Returns:
-            Base: An instance with attributes set from the dictionary.
+            Base: An instance with attributes
+            set from the dictionary.
         """
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
@@ -124,13 +131,16 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Create an instance with all attributes set from a dictionary.
+        """Create an instance with all attributes
+        set from a dictionary.
 
         Args:
-            **dictionary: A dictionary containing attribute names and values.
+            **dictionary: A dictionary containing
+            attribute names and values.
 
         Returns:
-            Base: An instance with attributes set from the dictionary.
+            Base: An instance with attributes
+            set from the dictionary.
         """
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
@@ -147,7 +157,8 @@ class Base:
         """Serialize a list of objects to a CSV file.
 
         Args:
-            list_objs (list): A list of instances that inherit from Base.
+            list_objs (list): A list of instances
+            that inherit from Base.
 
         Returns:
             None
@@ -196,7 +207,8 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Open a window and draw rectangles and squares using Turtle graphics.
+        """Open a window and draw rectangles
+        and squares using Turtle graphics.
 
         Args:
             list_rectangles (list): A list of Rectangle instances.
