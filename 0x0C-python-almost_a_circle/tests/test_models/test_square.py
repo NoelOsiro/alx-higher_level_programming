@@ -7,6 +7,7 @@ Unittest classes:
 import unittest
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
 
     def test_constructor(self):
@@ -44,6 +45,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.x, 70)
         self.assertEqual(r.y, 80)
         self.assertEqual(r.id, 2)
+
 
 if __name__ == "__main__":
     unittest.main()

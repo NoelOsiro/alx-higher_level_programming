@@ -73,7 +73,8 @@ class TestRectangle(unittest.TestCase):
                 - 3rd argument: height attribute
                 - 4th argument: x attribute
                 - 5th argument: y attribute
-            **kwargs: Variable-length keyword arguments, where each key represents an attribute to update.
+            **kwargs: Variable-length keyword arguments,
+            where each key represents an attribute to update.
         """
         if args:
             if len(args) >= 1:

@@ -11,11 +11,14 @@ class Square(Rectangle):
 
         Args:
             size (int): The size of the square (width and height).
-            x (int, optional): The x-coordinate of the square's position. Defaults to 0.
-            y (int, optional): The y-coordinate of the square's position. Defaults to 0.
-            id (int, optional): The ID of the square. Defaults to None.
+            x (int, optional): The x-coordinate of the square's position.
+            Defaults to 0.
+            y (int, optional): The y-coordinate of the square's position.
+            Defaults to 0.
+            id (int, optional): The ID of the square.
+            Defaults to None.
         """
-        super().__init__(size, size, x, y, id)  # Call the constructor of the base class (Rectangle).
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
@@ -24,7 +27,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        """Set the size of the square (width and height)."""
+        """Set the size of the square."""
         self.width = value
         self.height = value
 
@@ -36,7 +39,7 @@ class Square(Rectangle):
         """Update the attributes of the Square instance.
 
         Args:
-            *args: Variable-length positional arguments in the following order:
+            *args: Variable-length positional arguments:
                 - 1st argument: id attribute
                 - 2nd argument: size attribute
                 - 3rd argument: x attribute
