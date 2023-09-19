@@ -41,5 +41,13 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(b1.id + 1, b2.id)
         self.assertEqual(b2.id + 1, b3.id)
 
+    def test_custom_id_assignment(self):
+        """Test that Base saves the ID passed as an argument."""
+        # Create a Base instance with a specific ID (e.g., 89).
+        b = Base(89)
+
+        # Check if the instance has the ID passed as an argument.
+        self.assertEqual(b.id, 89)
+
 if __name__ == "__main__":
     unittest.main()
