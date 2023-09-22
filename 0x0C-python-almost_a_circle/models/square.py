@@ -1,78 +1,60 @@
 #!/usr/bin/python3
-"""Module for the Square class."""
+"""Defines a Square class."""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Square class that inherits from Rectangle."""
+    """Represents a square."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialize a Square instance.
+        """Initialize a new Square.
 
         Args:
-            size (int): The size of the square (width and height).
-            x (int, optional): The x-coordinate of the square's position.
-            Defaults to 0.
-            y (int, optional): The y-coordinate of the square's position.
-            Defaults to 0.
-            id (int, optional): The ID of the square.
-            Defaults to None.
+            size (int): The size of the new Square.
+            x (int): The x coordinate of the new Square.
+            y (int): The y coordinate of the new Square.
+            id (int): The identity of the new Square.
         """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """Get the size of the square (width and height)."""
+        """Get the size of the Square."""
         return self.width
 
     @size.setter
     def size(self, value):
-        """Set the size of the square."""
+        """Set the size of the Square."""
         self.width = value
         self.height = value
 
-    def __str__(self):
-        """Return a string representation of the square."""
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width)
-
     def update(self, *args, **kwargs):
-        """Update the attributes of the Square instance.
+        """Update the Square with new attributes.
 
         Args:
-            *args: Variable-length positional arguments:
-                - 1st argument: id attribute
-                - 2nd argument: size attribute
-                - 3rd argument: x attribute
-                - 4th argument: y attribute
-            **kwargs: Variable-length keyword arguments,
-            where each key represents an attribute to update.
+            *args (ints): New attribute values.
+            **kwargs (dict): New key/value pairs of attributes.
         """
         if args:
-            if len(args) >= 1:
-                self.id = args[0]
-            if len(args) >= 2:
-                self.size = args[1]
-            if len(args) >= 3:
-                self.x = args[2]
-            if len(args) >= 4:
-                self.y = args[3]
-        else:
-            if 'id' in kwargs:
-                self.id = kwargs['id']
-            if 'size' in kwargs:
-                self.size = kwargs['size']
-            if 'x' in kwargs:
-                self.x = kwargs['x']
-            if 'y' in kwargs:
-                self.y = kwargs['y']
+            attrs = ["id", "size", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, attrs[i], arg) if i < len(attrs) else None
+
+        elif kwargs:
+            for k, v in kwargs.items():
+                if k in ("id", "size", "x", "y"):
+                    setattr(self, k, v)
 
     def to_dictionary(self):
-        """Return the dictionary representation of the Rectangle."""
+        """Return a dictionary representation of the Square."""
         return {
-            'id': self.id,
-            'width': self.width,
-            'height': self.height,
-            'x': self.x,
-            'y': self.y
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
         }
+
+    def __str__(self):
+        """Return the string representation of a Square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.size)
