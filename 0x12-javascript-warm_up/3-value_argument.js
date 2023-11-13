@@ -1,3 +1,7 @@
 #!/usr/bin/node
 const numArgs = process.argv.length;
-console.log(numArgs < 3 ? 'No argument' : process.argv[2]);
+if (nums < 3) {
+    console.log('No Arguement');
+} else {
+    console.log(process.argv[2]);
+}
