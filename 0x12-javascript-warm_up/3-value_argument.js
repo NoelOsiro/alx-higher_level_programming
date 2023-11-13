@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const numArgs = process.argv.length;
 if (nums < 3) {
-    console.log('No Arguement');
+  console.log('No Arguement');
 } else {
-    console.log(process.argv[2]);
+  console.log(process.argv[2]);
 }
