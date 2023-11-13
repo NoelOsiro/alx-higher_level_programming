@@ -1,7 +1,2 @@
 #!/usr/bin/node
-const numArgs = process.argv.length;
-if (numArgs < 3) {
-  console.log('No Arguement');
-} else {
-  console.log(process.argv[2]);
-}
+console.log(typeof process.argv[2] === 'undefined' ? 'No argument' : process.argv[2]);
