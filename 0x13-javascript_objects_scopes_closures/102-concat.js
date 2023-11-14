@@ -1,4 +1,4 @@
-// File: 102-concat.js
+#!/usr/bin/node
 const fs = require('fs');
 
 const [, , sourceFile1, sourceFile2, destinationFile] = process.argv;

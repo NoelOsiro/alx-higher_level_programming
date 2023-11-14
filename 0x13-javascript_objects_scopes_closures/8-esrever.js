@@ -1,4 +1,4 @@
-// File: 8-esrever.js
+#!/usr/bin/node
 exports.esrever = function (list) {
   const reversedList = [];
 

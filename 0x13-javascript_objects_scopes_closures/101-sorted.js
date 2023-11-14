@@ -1,4 +1,4 @@
-// File: 101-sorted.js
+#!/usr/bin/node
 const { dict } = require('./101-data');
 
 const sortedDict = Object.entries(dict).reduce((acc, [key, value]) => {

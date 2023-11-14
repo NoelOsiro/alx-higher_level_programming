@@ -1,4 +1,4 @@
-// File: 9-logme.js
+#!/usr/bin/node
 let count = 0;
 
 exports.logMe = function (item) {
