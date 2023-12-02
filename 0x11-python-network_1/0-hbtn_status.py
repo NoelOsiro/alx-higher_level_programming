@@ -12,6 +12,6 @@ if __name__ == "__main__":
                 'https://intranet.hbtn.io/status',
                 headers=headers)) as response:
         html = response.read()
-        print("Body response:")
+        print("Body response:$")
         print("\t- type: {}\n\t- content: {}".format(type(html), html))
         print("\t- utf8 content: {}".format(html.decode('UTF-8')))
