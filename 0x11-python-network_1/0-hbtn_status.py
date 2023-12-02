@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status."""
+""" Get status in https://intranet.hbtn.io"""
 import urllib.request
 
 
 if __name__ == "__main__":
-    request = urllib.request.Request("https://intranet.hbtn.io/status")
-    with urllib.request.urlopen(request) as response:
-        body = response.read()
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+    with urllib.request.urlopen(urllib.request.Request('https://intranet.hbtn.io/status', headers=headers)) as response:
+        html = response.read()
         print("Body response:")
-        print("\t- type: {}".format(type(body)))
-        print("\t- content: {}".format(body))
-        print("\t- utf8 content: {}".format(body.decode("utf-8")))
+        print("\t- type: {}\n\t- content: {}".format(type(html), html))
+        print("\t- utf8 content: {}".format(html.decode('UTF-8')))
